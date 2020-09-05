@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@keyframes spin1 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin2 {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(29, 28, 28);
+  height: 100vh;
+}
+
+.images {
+  position: relative;
+  width: 300px;
+}
+
+.images img {
+  width: 100%;
+  height: auto;
+}
+
+.images img:nth-child(1) {
+  position: absolute;
+}
+
+.images img:nth-child(2) {
+  position: absolute;
+  animation-name: spin1;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.images img:nth-child(3) {
+  position: relative;
+  animation-name: spin2;
+  animation-duration: 40s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
